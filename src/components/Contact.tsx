@@ -54,22 +54,22 @@ const Contact = () => {
               LinkedIn <MdArrowOutward />
             </a>
             <a
-              href="https://twitter.com/rexspare"
+              href="https://wa.me/+923060275992"
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
-              Twitter / X <MdArrowOutward />
+              WhatsApp <MdArrowOutward />
             </a>
             <a
-              href="https://www.instagram.com/alsohamzah/"
+              href="https://t.me/+923497418141"
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
-              Instagram <MdArrowOutward />
+              Telegram <MdArrowOutward />
             </a>
           </div>
           <div className="contact-box">

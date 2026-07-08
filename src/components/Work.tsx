@@ -193,13 +193,6 @@ const projects = [
     image: "/images/kohinoorbazar.png",
     link: "https://play.google.com/store/apps/details?id=com.rsdtech.kohinoorbazar",
   },
-  {
-    title: "UI/UX Design",
-    category: "UI/UX Design Portfolio",
-    tools: "Figma",
-    image: "/images/uiux.png",
-    link: "https://drive.google.com/file/d/1pOwqpavYMIDjDkzOk9duDX1EBtY-VO-L/view?usp=sharing",
-  },
 ];
 
 function shuffle<T>(array: T[]): T[] {
@@ -212,7 +205,11 @@ function shuffle<T>(array: T[]): T[] {
 }
 
 const Work = () => {
-  const [shuffledProjects] = useState(() => shuffle(projects));
+  const [shuffledProjects] = useState(() => {
+    const pinned = projects.filter((p) => p.title === "Acheev Performance");
+    const rest = projects.filter((p) => p.title !== "Acheev Performance");
+    return [...pinned, ...shuffle(rest)];
+  });
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -277,7 +274,7 @@ const Work = () => {
                   <div className="carousel-content">
                     <div className="carousel-info">
                       <div className="carousel-number">
-                        <h3>0{index + 1}</h3>
+                        <h3>{String(index + 1).padStart(2, "0")}</h3>
                       </div>
                       <div className="carousel-details">
                         <h4>{project.title}</h4>
@@ -303,18 +300,23 @@ const Work = () => {
             </div>
           </div>
 
-          {/* Dot Indicators */}
-          <div className="carousel-dots">
-            {shuffledProjects.map((project, index) => (
-              <button
-                key={project.title}
-                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
-                  }`}
-                onClick={() => goToSlide(index)}
-                aria-label={`Go to project ${index + 1}`}
-                data-cursor="disable"
+          {/* Progress Indicator */}
+          <div className="carousel-progress">
+            <span className="carousel-progress-count">
+              {String(currentIndex + 1).padStart(2, "0")}
+            </span>
+            <div className="carousel-progress-bar">
+              <div
+                className="carousel-progress-fill"
+                style={{
+                  width: `${((currentIndex + 1) / shuffledProjects.length) * 100
+                    }%`,
+                }}
               />
-            ))}
+            </div>
+            <span className="carousel-progress-total">
+              {String(shuffledProjects.length).padStart(2, "0")}
+            </span>
           </div>
         </div>
       </div>

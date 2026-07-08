@@ -150,34 +150,50 @@
   right: -70px;
 }
 
-/* ── Dot Indicators ── */
-.carousel-dots {
+/* ── Progress Indicator ── */
+.carousel-progress {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 16px;
   margin-top: 35px;
 }
 
-.carousel-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
+.carousel-progress-count,
+.carousel-progress-total {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
 }
 
-.carousel-dot:hover {
-  border-color: var(--accentColor);
-  background: rgba(94, 234, 212, 0.2);
+.carousel-progress-count {
+  color: var(--accentColor);
 }
 
-.carousel-dot-active {
+.carousel-progress-total {
+  color: #adacac;
+}
+
+.carousel-progress-bar {
+  position: relative;
+  width: 240px;
+  max-width: 40vw;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.carousel-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   background: var(--accentColor);
-  border-color: var(--accentColor);
+  border-radius: 2px;
   box-shadow: 0 0 8px rgba(94, 234, 212, 0.4);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ── Work Image (reused) ── */

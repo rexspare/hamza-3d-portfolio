@@ -21,6 +21,19 @@ const imageUrls = [
   "/images/mysql.webp",
   "/images/typescript.webp",
   "/images/javascript.webp",
+  "/images/graphql.webp",
+  "/images/redux.webp",
+  "/images/firebase.webp",
+  "/images/nestjs.webp",
+  "/images/tailwind.webp",
+  "/images/postgresql.webp",
+  "/images/jest.webp",
+  "/images/git.webp",
+  "/images/figma.webp",
+  "/images/supabase.webp",
+  "/images/reactnative.webp",
+  "/images/expo.webp",
+  "/images/stripe.webp",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -166,6 +179,20 @@ const TechStack = () => {
     );
   }, []);
 
+  // Assign a material to every sphere so each logo appears at least once
+  // (first N spheres cover all logos, the rest are filled randomly), then shuffle.
+  const materialAssignments = useMemo(() => {
+    const n = materials.length;
+    const arr = spheres.map((_, i) =>
+      i < n ? i : Math.floor(Math.random() * n)
+    );
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, [materials.length]);
+
   return (
     <div className="techstack">
       <h2> My Techstack</h2>
@@ -193,7 +220,7 @@ const TechStack = () => {
             <SphereGeo
               key={i}
               {...props}
-              material={materials[Math.floor(Math.random() * materials.length)]}
+              material={materials[materialAssignments[i]]}
               isActive={isActive}
             />
           ))}
