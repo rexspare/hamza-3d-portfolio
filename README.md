@@ -1,176 +1,54 @@
-# 3D Portfolio Website
+# Hamza Zafar — Senior React Native & Full Stack Mobile Engineer
 
-This repository contains the source code for a personal 3D portfolio built with React, TypeScript, Three.js, React Three Fiber, and GSAP. It includes animated page sections, a character scene, custom cursor interactions, and smooth transitions designed for a modern portfolio experience.
+> Building Scalable Apps, One Commit at a Time 🚀
 
-Live site: [https://akashrmalhotra.netlify.app/](https://akashrmalhotra.netlify.app/)
+A 3D, interactive personal portfolio built with React, TypeScript, Three.js, React Three Fiber, and GSAP. This README doubles as a quick overview of who I am and what I've shipped.
 
-![Portfolio Preview](public/images/preview1.png)
+## About Me
 
-## Table of Contents
+5+ years of experience engineering end-to-end mobile solutions and shipping **50+ production apps**. Expert in **React Native, TypeScript, and Node.js**. I maximize performance from pixel-perfect, 60 FPS frontends to scalable, high-concurrency backends—slashing load times by 50% and boosting stability by 70%.
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Available Scripts](#available-scripts)
-- [GSAP License Note](#gsap-license-note)
-- [Customization Guide](#customization-guide)
-- [Troubleshooting](#troubleshooting)
-- [Deployment](#deployment)
-- [License](#license)
+## Skills
 
-## Features
+- **Mobile & Frontend:** React Native, Expo, TypeScript, React.js, Next.js, Redux, Zustand, Tailwind CSS, React Navigation
+- **Backend & Integrations:** Node.js, NestJS, Express.js, GraphQL, REST APIs, Firebase, Supabase, MongoDB, SQL, WebSockets, Stripe, In-App Purchases, OpenAI / GenAI, Push Notifications
+- **Tools & DevOps:** AWS, Vercel, Netlify, Git, CI/CD, Jest, Sentry, Xcode, Android Studio, Fastlane, Jira
+- **Other:** Performance Optimization, Unit / E2E Testing, App Store & Play deployment, Accessibility, Agile / Scrum, Technical Leadership, Code Review & Mentoring
 
-- Responsive one-page portfolio layout with reusable section components.
-- 3D character scene rendering powered by React Three Fiber and Three.js.
-- GSAP-powered animations and transitions for interactive storytelling.
-- Custom cursor, hover interactions, and scroll-driven visual effects.
-- Organized component architecture with dedicated utilities and style modules.
+## Experience
 
-## Tech Stack
+| Role | Company | Period |
+| --- | --- | --- |
+| Senior Mobile App Developer | [SitePod](https://sitepod.com/) — USA (Remote) | Oct 2024 – Oct 2025 |
+| Full Stack Mobile App Developer | [D12 Solutions](https://d12-solutions.com/) — Pakistan | Feb 2023 – Oct 2024 |
+| Mobile App Developer | [Jeux Developers](https://jeuxdevelopers.com/) — Pakistan | Jul 2022 – Jan 2023 |
+| React Native Developer | [Hello World Technologies](https://hwryk.com/) — Pakistan | Jan 2020 – Jul 2022 |
 
-### Core
+## Featured Projects
 
-- React 18
-- TypeScript
-- Vite
+- **[Acheev Performance](https://apps.apple.com/us/app/acheev-performance-app/id1636595346)** — Athlete performance tracking (React Native, GraphQL, Node.js, PostgreSQL)
+- **[Glowvia: AI Glow Up](https://apps.apple.com/us/app/glowvia/id6760437185)** — AI beauty & wellness coach (React Native, TypeScript, AI/ML)
+- **[Nomadz](https://apps.apple.com/pk/app/nomadz/id6448633205)** — Outdoor gear marketplace (React Native, Node.js, Firebase)
+- **[SwimtoFly](https://play.google.com/store/apps/details?id=com.swimtofly.android)** — Swimming learning platform (React Native, Firebase)
+- **[1Earth](https://www.1earth.site)** — Charity giving platform (Next.js, TypeScript, Stripe)
 
-### Animation and 3D
+...and 20+ more shipped to the App Store and Google Play.
 
-- GSAP + `@gsap/react`
-- Three.js
-- `@react-three/fiber`
-- `@react-three/drei`
-- `@react-three/postprocessing`
-- `@react-three/cannon`
-- `@react-three/rapier`
+## Education
 
-### Supporting Libraries
+**B.Sc Software Engineering** — Khawaja Fareed University of Engineering & IT (KFUEIT)
 
-- `react-icons`
-- `react-fast-marquee`
-- `@vercel/analytics`
+## Connect
 
-## Project Structure
+- Portfolio: this repo 🙂
+- GitHub: [github.com/rexspare](https://github.com/rexspare)
+- LinkedIn: [linkedin.com/in/hamzazafarrc](https://www.linkedin.com/in/hamzazafarrc/)
+- Résumé: [rxresu.me/hamzazafarrc](https://rxresu.me/hamzazafarrc/hamza-zafar-senior-react-native-engineer)
+- Email: [hamzazafarrc@gmail.com](mailto:hamzazafarrc@gmail.com)
+- Telegram: [@hamza](https://t.me/+923497418141)
 
-```text
-.
-├── public/                    # Static assets
-├── src/
-│   ├── assets/                # Local media/assets
-│   ├── components/
-│   │   ├── Character/         # 3D scene + character logic/utilities
-│   │   ├── styles/            # Section/component CSS files
-│   │   ├── About.tsx
-│   │   ├── Career.tsx
-│   │   ├── Contact.tsx
-│   │   ├── Landing.tsx
-│   │   ├── MainContainer.tsx  # Main page composition
-│   │   ├── Navbar.tsx
-│   │   ├── TechStack.tsx
-│   │   ├── WhatIDo.tsx
-│   │   └── Work.tsx
-│   ├── context/               # Global providers (loading state, etc.)
-│   ├── data/                  # Static data/content definitions
-│   ├── App.tsx
-│   └── main.tsx
-├── package.json
-└── vite.config.ts
-```
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ (recommended)
-- npm 9+ (or compatible)
-
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone <your-repository-url>
-   cd 3d-portfolio
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-3. Start the local development server:
-
-   ```bash
-   npm run dev
-   ```
-
-4. Open the URL shown in the terminal (typically `http://localhost:5173`).
-
-## Available Scripts
-
-- `npm run dev`  
-  Starts Vite dev server and exposes host for local network testing.
-
-- `npm run build`  
-  Type-checks and builds a production-ready bundle.
-
-- `npm run preview`  
-  Serves the production build locally for verification.
-
-- `npm run lint`  
-  Runs ESLint checks across the project.
-
-## GSAP License Note
-
-This project uses the standard `gsap` package, including bonus plugins now available in the core package.
-
-- Install dependencies with `npm install`.
-- If migrating from older setups, remove `gsap-trial` from your project.
-
-Read official installation guidance here: [GSAP Installation Docs](https://gsap.com/docs/v3/Installation/)
-
-## Customization Guide
-
-You can adapt this portfolio to your own profile by updating the following areas:
-
-- **Content sections**: Edit files in `src/components/` such as `About.tsx`, `Career.tsx`, `WhatIDo.tsx`, and `Work.tsx`.
-- **Data source**: Update static values in files under `src/data/`.
-- **Styling**: Modify component styles in `src/components/styles/` and global styles in `src/index.css` / `src/App.css`.
-- **3D scene behavior**: Adjust scene logic in `src/components/Character/` and related utilities.
-- **Animations**: Tweak GSAP utilities under `src/components/utils/`.
-
-## Troubleshooting
-
-- **Blank screen in development**  
-  Check browser console for module import errors and verify all dependencies are installed.
-
-- **3D performance issues on low-end devices**  
-  Reduce scene complexity and post-processing effects in the character/scene utilities.
-
-- **GSAP plugin errors**  
-  Ensure you have the correct plugin package and license configuration for your target environment.
-
-- **TypeScript build failures**  
-  Run `npm run build` and address reported type errors before deploying.
-
-## Deployment
-
-1. Create a production build:
-
-   ```bash
-   npm run build
-   ```
-
-2. Validate locally:
-
-   ```bash
-   npm run preview
-   ```
-
-3. Deploy the generated `dist/` folder to your hosting provider (for example Vercel, Netlify, or Cloudflare Pages).
+---
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+Open source under the [MIT License](LICENSE).
