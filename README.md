@@ -6,7 +6,7 @@ A 3D, interactive personal portfolio built with React, TypeScript, Three.js, Rea
 
 ## About Me
 
-5+ years of experience engineering end-to-end mobile solutions and shipping **50+ production apps**. Expert in **React Native, TypeScript, and Node.js**. I maximize performance from pixel-perfect, 60 FPS frontends to scalable, high-concurrency backends—slashing load times by 50% and boosting stability by 70%.
+6+ years of experience engineering end-to-end mobile solutions and shipping **50+ production apps**. Expert in **React Native, TypeScript, and Node.js**. I maximize performance from pixel-perfect, 60 FPS frontends to scalable, high-concurrency backends—slashing load times by 50% and boosting stability by 70%.
 
 ## Skills
 
